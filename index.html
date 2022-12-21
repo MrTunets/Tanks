@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Танки</title>
+    <link rel="stylesheet" href="src/css/main.css">
+</head>
+<body class="game-zone">
+<div class="panel">
+    <div class="info">
+        <span class="player-name">Имя игрока: <span class="inner-name">Не имеется</span></span>
+        <span class="points">Очки: <span class="inner-points">0</span></span>
+        <span class="level">Уровень сложности: <span class="level-inner">Не выбран</span></span>
+    </div>
+    <div class="life">
+
+    </div>
+</div>
+
+<div class="start-panel on">
+    <div class="start-panel-group">
+        <h2>Танки</h2>
+        <p>Введите имя:</p>
+        <input type="text" class="name-input">
+        <p>Выберите уровень:</p>
+        <ul class="levels">
+            <li class="levels__item" type="light"><a href="#">Лёгкий</a></li>
+            <li class="levels__item" type="medium"><a href="#">Средний</a></li>
+            <li class="levels__item" type="hard"><a href="#">Сложный</a></li>
+        </ul>
+        <button class="start-btn">Начать игру</button>
+    </div>
+    <div class="blur"></div>
+</div>
+
+<div class="game-over">
+    <div class="game-over-info">
+        <span>Игра окочена</span>
+        <a href="#" onclick="game()">Начать заново</a>
+    </div>
+    <div class="blur"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="src/js/game.js"></script>
+</body>
+</html>

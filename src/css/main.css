@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+}
+
+.game-zone {
+    font-family: "Montserrat SemiBold";
+    position: relative;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-image: url(../sprites/back.png);
+    font-weight: bold;
+}
+
+.player {
+    position: absolute;
+    width: 78px;
+    height: 77px;
+    background-image: url(../sprites/player-top.png);
+    background-repeat: no-repeat;
+}
+
+.bullet {
+    position: absolute;
+    width: 18px;
+    height: 16px;
+    background-image: url(../sprites/bullet.png);
+    background-repeat: no-repeat;
+}
+
+.enemy-bullet {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-image: url(../sprites/bullet.png);
+    background-repeat: no-repeat;
+}
+
+.enemy {
+    position: absolute;
+    width: 78px;
+    height: 77px;
+    background-image: url(../sprites/enemy-right.png);
+    background-repeat: no-repeat;
+}
+
+.panel {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.67);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.info {
+    width: 250px;
+    padding: 20px 0 20px 20px;
+    /*border: 2px solid #000;*/
+    /*margin-right: 20px;*/
+}
+
+.inner-name {
+    color: #398610;
+}
+
+.level {
+    font-size: 14px;
+}
+
+.life__image {
+    width: 100px;
+}
+
+span {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.points{
+    display: block;
+}
+
+.start-btn {
+    display: block;
+    padding: 10px;
+    border: 2px solid #e3a853;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.game-over {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    transition: 0.5s ease;
+}
+
+.start-panel {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+}
+
+
+.start-panel-group {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+    background: rgba(255, 255, 255, 0.67);
+    padding: 40px;
+    border-radius: 5px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.start-panel-group h2 {
+    font-size: 30px;
+}
+
+.start-panel-group input {
+    padding: 10px 20px;
+    border: 2px solid #afafaf;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.levels {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.levels li {
+    display: block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.levels li:last-child {
+    margin-right: 0;
+}
+
+.levels li.active {
+    border: 2px solid red;
+}
+
+.levels li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.on {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s ease;
+}
+
+
+.blur {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../sprites/bg-game-over.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+
+.game-over-info {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+}
+
+.game-over-info > span {
+    display: block;
+    font-size: 72px;
+    animation-iteration-count: infinite;
+    animation-name: anim;
+    animation-duration: 1s;
+}
+
+.game-over-info > a {
+    color: #ffffff;
+}
+
+.results {
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+
+@keyframes anim{
+    0% {
+        color: #000;
+    }
+
+    50%{
+        color: red;
+    }
+
+    100%{
+        color: #000;
+    }
+}
